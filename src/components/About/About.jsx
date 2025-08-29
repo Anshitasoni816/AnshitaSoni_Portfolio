@@ -1,7 +1,7 @@
 import React from 'react'
 import { Typewriter } from 'react-simple-typewriter'
 // import Tilt from 'react-parallax-tilt';
-import profolioImage from '../../assets/anshuImageLinkedin.png'
+import profolioImage from '../../assets/profileImage.png'
 
 const About = () => {
   return (
@@ -100,7 +100,7 @@ const About = () => {
 
           <img src={profolioImage} alt="Anshita Soni"
             className='rounded object-cover h-50 w-50
-md:h-70 md:w-70 mb-10 drop-shadow-[0_15px_20px_rgba(104,55,189,0.7)] transition duration-500 transform hover:scale-105 outline-2 outline-white'/>
+            md:h-70 md:w-70 mb-10 drop-shadow-[0_15px_20px_rgba(104,55,189,0.7)] transition duration-700 transform hover:scale-105 outline-2 outline-white'/>
 
         </div>
 

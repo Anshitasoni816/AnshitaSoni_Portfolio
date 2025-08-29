@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import NptelCertificate from '../../assets/NPTEL_page-0001.jpg'
+import NptelCertificate from '../../assets/NPTEL_Certificate.jpg'
 
 const CertificatesSlider = () => {
 
@@ -53,22 +53,22 @@ const CertificatesSlider = () => {
         <section 
         id = "Certificates"
         className="py-24 px-[10vw] md:px-[7vw] lg:px-[20vw]">
-            <h2 className="font-bold text-3xl md:text-4xl text-center bg-gradient-to-b from-[#ff00cc]  to-[#3333ff] bg-clip-text text-transparent tracking-wider">Certificates</h2>
-            <p className="text-center mt-8 text-[#c6b9b9] tracking-wide">Currently, I hold one certificate. To demonstrate the slider functionality, I’ve included sample images, which will be replaced with actual certificates as I earn them.</p>
+            <h2 className="font-bold text-4xl md:text-5xl text-center bg-gradient-to-b from-[#ff00cc]  to-[#3333ff] bg-clip-text text-transparent tracking-wider">Certificates</h2>
+            <p className="text-center mt-8 text-white tracking-wide text-lg">Currently, I hold one certificate. To demonstrate the slider functionality, I’ve included sample images, which will be replaced with actual certificates as I earn them.</p>
 
             <div className="text-white flex justify-center items-center md:gap-5 gap-3 mt-10">
 
                 <div className="font-extrabold md:text-5xl text-xl cursor-pointer text-[#8345ec] hover:text-[#5713cd] transition duration-200"
                     onClick={Previous}> &lt; </div>
 
-                <div className="relative">
+                <div>
 
                     <img
                      src={certificates[currentIndex].image} 
                      alt={`${currentIndex + 1} certificates`}
-                     className="md:h-[29vw] md:w-[40vw] object-cover border-2 border-white rounded-xl" />
+                     className="md:h-[29vw] md:w-[40vw] object-cover border-2 border-white rounded-xl transition duration-700 transform hover:scale-103"/>
 
-                    <p className="absolute bottom-0 left-2 right-2 md:bottom-3 leading-tight text-center italic text-sm md:text-lg font-medium">{certificates[currentIndex].title}</p>
+                    <p className="leading-tight text-center italic text-sm md:text-lg font-medium mt-3">{certificates[currentIndex].title}</p>
 
                 </div>
 
