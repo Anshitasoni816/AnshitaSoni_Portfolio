@@ -1,6 +1,5 @@
 import React from 'react'
 import { Typewriter } from 'react-simple-typewriter'
-// import Tilt from 'react-parallax-tilt';
 import profolioImage from '../../assets/profileImage.png'
 
 const About = () => {
@@ -40,8 +39,6 @@ const About = () => {
 
           <p className='text-lg lg:text-xl font-medium leading-relaxed text-[#e0e0e0] mt-8 mb-10 '>
 
-            {/* I’m a Software Engineer with a strong passion for crafting elegant and efficient solutions. I specialize in developing full-stack applications using the */}
-            I'm an aspiring
             <span className='text-[#dda5fc] font-bold underline underline-offset-4 ms-2 me-2 tracking-wider'>
               <Typewriter
                 words={[

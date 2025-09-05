@@ -3,8 +3,6 @@ import { FiMenu, FiX } from 'react-icons/fi';
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 const Navbar = () => {
-
-  const [isScrolled, setIsScrolled] = useState(false); //Tracks if user scrolled down (for adding blur/shadow later).
   
   const [activeSection, setActiveSection] = useState("");
   const [isNavOpen, setIsNavOpen] = useState(false); //isNavOpen: For mobile nav toggle (open/close).
@@ -13,7 +11,6 @@ const Navbar = () => {
 
   //function for smooth scrolling 
   const scrollToSection = (sectionId) => {
-    // setActiveSection(sectionId);
     setIsNavOpen(false);
 
     const section = document.getElementById(sectionId);
@@ -21,18 +18,6 @@ const Navbar = () => {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
-
-
-
-  // useEffect(()=>{
-  //   const handleScroll = () => {
-  //     setIsScrolled(window.scrollY > 50);
-  //   };
-
-  //   window.addEventListener("scroll",handleScroll);
-  //   return() =>  window.removeEventListener("scroll",handleScroll);
-
-  // }, []);
 
   const menuItems = [
     { id: "About", label: "About" },
@@ -46,9 +31,6 @@ const Navbar = () => {
 
       <nav className='fixed top-0 w-full z-50 transition duration-300 px-[6vw] md:px-[7vw] 
       '> 
-
-        {/* {`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw]
-      ${isScrolled ? "bg-[#050414] bg-opacity-50 backdrop-blur-md shadow-md" : "bg-transparent"}`} */}
 
         <div className='text-white py-5 flex items-center justify-between'>
 
@@ -66,7 +48,7 @@ const Navbar = () => {
 
           {/* Desktop menu */}
           <ul className='hidden md:flex space-x-8 bg-gradient-to-r from-[#ff00cc]  to-[#3333ff] bg-clip-text text-transparent'>
-{/* [#8345ec] */}
+
             {
 
               menuItems.map((items) => (
@@ -75,9 +57,6 @@ const Navbar = () => {
                   key={items.id}
                   className='cursor-pointer hover:text-white font-medium transition duration-300 transform hover:scale-105'
                 >
-
-                  {/* {`cursor-pointer hover:text-[#8245ec] ${activeSection === items.id ? "text-[#8245ec]" : ""
-                    }`} */}
 
                   <button
                   onClick={() => scrollToSection(items.id)}
@@ -136,8 +115,6 @@ const Navbar = () => {
 
         {
           isNavOpen && (
-            
-            // left-1/2 transform -translate-x-1/2  alternative way flex justify-center
 
             <div className="absolute top-16  left-1/2 transform -translate-x-1/2 w-4/5 z-50 bg-opacity-50 backdrop-filter backdrop-blur-lg rounded-lg shadow-lg md:hidden py-2">
 

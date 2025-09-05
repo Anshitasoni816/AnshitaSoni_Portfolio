@@ -60,8 +60,6 @@ const Work = () => {
           My projects are currently under development. These cards are temporary placeholders and will be updated soon with real project showcases
         </p>
 
-        {/* Showcasing the projects I’ve built, reflecting my skills and technical experience */}
-
       </div>
 
       {/* Project grid Part*/}
