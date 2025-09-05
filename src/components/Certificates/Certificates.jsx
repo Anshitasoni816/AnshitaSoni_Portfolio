@@ -65,7 +65,8 @@ const CertificatesSlider = () => {
 
                     <a href={certificates[currentIndex].credentials}
                         target='_blank'
-                        rel='noopener noreferrer'><img
+                        rel='noopener noreferrer'>
+                            <img
                             src={certificates[currentIndex].image}
                             alt={`${currentIndex + 1} certificates`}
                             className="md:h-[29vw] md:w-[40vw] object-cover border-2 border-white rounded-xl transition duration-700 transform hover:scale-103" /></a>

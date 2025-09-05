@@ -4,7 +4,6 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 const Navbar = () => {
   
-  const [activeSection, setActiveSection] = useState("");
   const [isNavOpen, setIsNavOpen] = useState(false); //isNavOpen: For mobile nav toggle (open/close).
 
 
@@ -29,7 +28,7 @@ const Navbar = () => {
   return (
     <>
 
-      <nav className='fixed top-0 w-full z-50 transition duration-300 px-[6vw] md:px-[7vw] 
+      <nav className='fixed top-0 w-full z-50 px-[6vw] md:px-[7vw] 
       '> 
 
         <div className='text-white py-5 flex items-center justify-between'>
@@ -47,7 +46,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop menu */}
-          <ul className='hidden md:flex space-x-8 bg-gradient-to-r from-[#ff00cc]  to-[#3333ff] bg-clip-text text-transparent'>
+          <ul className='hidden md:flex space-x-8 bg-gradient-to-r from-[#ff00cc] to-[#3333ff] bg-clip-text text-transparent'>
 
             {
 
@@ -78,8 +77,8 @@ const Navbar = () => {
           <div className='hidden md:flex space-x-4'>
 
             <a href="https://github.com/Anshitasoni816"
-              target="_blank"
-              rel="noopener noreferrer"
+              target="_blank" //Opening a door into another room.
+              rel="noopener noreferrer"//noopener : Locking the door behind you so the new room can’t mess with your original room., noreferrer: Not leaving a “visiting card” behind that says where you came from.
               className='text-gray-300 hover:text-[#ff00ff] hover:font-medium  transition duration-300 transform hover:scale-110'>
               <FaGithub size={24} />
             </a>
