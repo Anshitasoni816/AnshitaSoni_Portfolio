@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { HiOutlineMailOpen } from "react-icons/hi";//<HiOutlineMailOpen />
 
@@ -10,10 +10,10 @@ const Footer = () => {
     { id: "Projects", label: "Projects" },
   ]
 
-  const [activeSection, setActiveSection] = useState();
+  // const [activeSection, setActiveSection] = useState();
 
   const ScrollToSection = (sectionId) => {
-    setActiveSection(sectionId)
+    // setActiveSection(sectionId)
     const section = document.getElementById(sectionId)
     if (section) {
       section.scrollIntoView({ behavior: "smooth" })

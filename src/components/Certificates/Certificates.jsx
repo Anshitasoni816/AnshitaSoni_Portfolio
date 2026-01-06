@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import NptelCertificate from '../../assets/NPTEL_Certificate.jpg'
-
+import ReactCertificate from '../../assets/certificate_page-0001.jpg'
+import JSCertificate from '../../assets/JavaScriptCertificate.webp'
+import NptelBigDataComputing from '../../assets/NPTEL_BIGDATA_COMPUTING_CERTIFICATE_page-0001.jpg'
 const CertificatesSlider = () => {
 
     const [currentIndex, setcurrentIndex] = useState(0);
@@ -36,17 +38,14 @@ const CertificatesSlider = () => {
             image: NptelCertificate, title: "Achieved 81% in Foundation of Cloud IoT Edge ML certification.", credentials: "https://1drv.ms/b/c/4a75efa212f547d5/ESgbaAQI-2lCtgCrjyipLdsB5qlKEB_ldLhafKCPb3hqxQ?e=eT79ED"
         },
         {
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTRhqzydl6pybN8ilTVoHSnVYb5SVq-WzIQQ&s", title: "Achieved 81% in Foundation of Cloud IoT Edge ML certification.", credentials: ""
+            image: ReactCertificate, title: "", credentials: "https://1drv.ms/b/c/4a75efa212f547d5/IQDVJwqCbaMLQqYDlgXMXe5dARCeK6aNKY6QQ_Ixx8QNtBQ?e=7oQhdw"
         },
         {
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIjwR4e4hMXd_lKAYUEKOaIxoy0mNe1ahJIw&s", title: "Achieved 81% in Foundation of Cloud IoT Edge ML certification.", credentials: ""
+            image: JSCertificate, title: "", credentials: "https://1drv.ms/b/c/4a75efa212f547d5/IQCGEqgbeUcZQruP0cL-f2GeAQioDjkaqlatGfbX7oXPkG4?e=aNmiaR"
         },
         {
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqCYEVIaqIz-_VsZmeNtrAgQ7yfns4qLbwxw&s", title: "Achieved 81% in Foundation of Cloud IoT Edge ML certification.", credentials: ""
+            image: NptelBigDataComputing, title: "", credentials: "https://1drv.ms/i/c/4a75efa212f547d5/IQBknW_mvhNoSZcK6m4zcuwAATuMZafFYwqdQUfZX8o4Tr8?e=vBcnkX"
         },
-        {
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0L4BZXZS6GeIdKyuMqMhhWYBkqRN_oo4Meg&s", title: "Achieved 81% in Foundation of Cloud IoT Edge ML certification.", credentials: ""
-        }
     ];
 
     return (
@@ -54,7 +53,7 @@ const CertificatesSlider = () => {
             id="Certificates"
             className="py-24 px-[10vw] md:px-[7vw] lg:px-[20vw]">
             <h2 className="font-bold text-4xl md:text-5xl text-center bg-gradient-to-b from-[#ff00cc]  to-[#3333ff] bg-clip-text text-transparent tracking-wider">Certificates</h2>
-            <p className="text-center mt-8 text-white tracking-wide text-lg">Currently, I hold one certificate. To demonstrate the slider functionality, I’ve included sample images, which will be replaced with actual certificates as I earn them.</p>
+            <p className="text-center mt-8 text-white tracking-wide text-lg">Certifications reflecting my commitment to continuous learning and professional skill development.</p>
 
             <div className="text-white flex justify-center items-center md:gap-5 gap-3 mt-10">
 
