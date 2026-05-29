@@ -1,159 +1,126 @@
 import React from 'react'
-import { Typewriter } from 'react-simple-typewriter'
-import { SiMongodb } from "react-icons/si";//<SiMongodb />
-import { SiExpress } from "react-icons/si";//<SiExpress />
-import { FaReact } from "react-icons/fa";//<FaReact />
-import { FaNodeJs } from "react-icons/fa";//<FaNodeJs />
-import { GrMysql } from "react-icons/gr";//
-import { GrHtml5 } from "react-icons/gr";//<GrHtml5 />
-import { TbBrandCss3 } from "react-icons/tb";//<TbBrandCss3 />
-import { FiGithub } from "react-icons/fi";//<FiGithub />
-import { RiTailwindCssFill } from "react-icons/ri";//<RiTailwindCssFill />
-import { AiOutlineJavaScript } from "react-icons/ai";//<AiOutlineJavaScript />
-import { BsBootstrap } from "react-icons/bs";//<BsBootstrap />
-import { IoIosArrowRoundUp } from "react-icons/io";
+import { motion } from 'framer-motion'
+import { AiOutlineJavaScript } from 'react-icons/ai'
+import { FaNodeJs, FaReact, FaGitAlt } from 'react-icons/fa'
+import { GrMysql } from 'react-icons/gr'
+import { RiTailwindCssFill } from 'react-icons/ri'
+import { SiExpress, SiFirebase, SiMongodb, SiNetlify, SiPostman, SiRedux, SiVite } from 'react-icons/si'
+import { VscVscode } from 'react-icons/vsc'
 
+const SKILL_CATEGORIES = [
+  {
+    label: 'Frontend',
+    color: 'text-cyan-400',
+    border: 'border-cyan-500/20',
+    skills: [
+      { name: 'JavaScript', Icon: AiOutlineJavaScript, color: 'text-yellow-400' },
+      { name: 'React.js', Icon: FaReact, color: 'text-cyan-400' },
+      { name: 'Redux Toolkit', Icon: SiRedux, color: 'text-purple-400' },
+      { name: 'Tailwind CSS', Icon: RiTailwindCssFill, color: 'text-sky-400' },
+    ],
+  },
+  {
+    label: 'Backend & Databases',
+    color: 'text-emerald-400',
+    border: 'border-emerald-500/20',
+    skills: [
+      { name: 'Node.js', Icon: FaNodeJs, color: 'text-green-400' },
+      { name: 'Express.js', Icon: SiExpress, color: 'text-slate-300' },
+      { name: 'MongoDB', Icon: SiMongodb, color: 'text-lime-400' },
+      { name: 'MySQL', Icon: GrMysql, color: 'text-cyan-300' },
+    ],
+  },
+  {
+    label: 'Tools & Deployment',
+    color: 'text-orange-400',
+    border: 'border-orange-500/20',
+    skills: [
+      { name: 'Firebase', Icon: SiFirebase, color: 'text-yellow-500' },
+      { name: 'Netlify', Icon: SiNetlify, color: 'text-teal-400' },
+      { name: 'Postman', Icon: SiPostman, color: 'text-orange-400' },
+      { name: 'Git', Icon: FaGitAlt, color: 'text-red-400' },
+    ],
+  },
+]
 
-
-
-const Skills = () => {
-  return (
-
-    <section
-
-
-      id="Skills"
-      className='py-24 px-[12vw] md:px-[7vw] lg:px-[20vw] bg-[#0e0c25] mt-24'>
-
-      <div className='text-center'>
-
-        <h2 className='text-3xl md:text-4xl bg-gradient-to-b from-[#ff00cc]  to-[#3333ff] bg-clip-text text-transparent font-bold tracking-wider'>SKILLS</h2>
-
-        <h4 className='text-md md:text-xl font-bold text-[#ff00ff] leading-tight italic mt-5 tracking-wider'>
-
-          <Typewriter
-            words={[
-              'Programming Languages 💻',
-              'Databases 🗄️',
-              'Frameworks 🧱',
-              'Tools 🛠️'
-            ]}
-            typeSpeed={100}
-            deleteSpeed={50}
-            delaySpeed={500}
-            loop={0}
-            cursor
-            cursorStyle='|'
-          />
-        </h4>
-
-        <p className='text-lg leading-relaxed text-[#e0e0e0] mt-6 tracking-wide'>A showcase of my technical skills and knowledge shaped by projects, challenges, and continuous learning.</p>
-
-
-      </div>
-
-      <div>
-
-        <div className='mt-10 md:py-14 py-10 border-2 rounded-2xl border-gray-400 shadow-[inset_0_0_30px_#8732b5] shadow-[#c007b0] px-10 '>
-
-          <div className='flex flex-wrap
-        justify-center items-center md:gap-10 gap-8 text-white'>
-
-
-            <div className='group inline-block text-center'>
-              <p className="text-sm italic opacity-0 group-hover:opacity-100 transition-opacity duration-500 mb-2">
-                HTML5
-              </p>
-              <GrHtml5 size={70} className="shadow-[0_0_10px_#8732b5]  shadow-amber-400 p-2  text-amber-600 hover:shadow-[inset_0_0_15px_#8732b5] transition-all duration-1000 transform hover:rotate-y-360 rounded-xl  border border-amber-600 filter contrast-100" />
-            </div>
-
-
-            <div className='group inline-block text-center'>
-              <p className="text-sm italic opacity-0 group-hover:opacity-100 transition-opacity duration-500 mb-2">
-                CSS3
-              </p>
-              <TbBrandCss3 size={70} className="shadow-[0_0_10px_#8732b5] shadow-blue-500 p-2  text-blue-600 hover:shadow-[inset_0_0_15px_#8732b5] transition-all duration-1000 transform hover:rotate-y-360 rounded-xl border border-blue-600" />
-            </div>
-
-
-            <div className='group inline-block text-center'>
-              <p className="text-sm italic opacity-0 group-hover:opacity-100 transition-opacity duration-500 mb-2">
-                JavaScript
-              </p>
-              <AiOutlineJavaScript size={70} className="shadow-[0_0_10px_#8732b5] shadow-yellow-300 p-2  text-yellow-400 hover:shadow-[inset_0_0_15px_#8732b5]transition-all duration-1000 transform hover:rotate-y-360 rounded-xl border border-yellow-400" />
-            </div>
-
-
-            <div className='group inline-block text-center'>
-              <p className="text-sm italic opacity-0 group-hover:opacity-100 transition-opacity duration-500 mb-2">
-                React
-              </p>
-              <FaReact size={70} className="shadow-[0_0_10px_#8732b5] shadow-cyan-400 p-2 text-cyan-600 hover:shadow-[inset_0_0_15px_#8732b5] transition-all duration-1000 transform hover:rotate-y-360 rounded-xl border border-cyan-600" />
-            </div>
-
-
-            <div className='group inline-block text-center'>
-              <p className="text-sm italic opacity-0 group-hover:opacity-100 transition-opacity duration-500 mb-2">
-                Node.js
-              </p>
-              <FaNodeJs size={70} className="shadow-[0_0_10px_#8732b5] shadow-green-400 p-2  text-green-600 hover:shadow-[inset_0_0_15px_#8732b5]  transition-all duration-1000 transform hover:rotate-y-360 rounded-xl border border-green-600" />
-            </div>
-
-
-            <div className='group inline-block text-center'>
-              <p className="text-sm italic opacity-0 group-hover:opacity-100 transition-opacity duration-500 mb-2">
-                MySQL
-              </p>
-              <GrMysql size={70} className="shadow-[inset_0_0_10px_#8732b5] shadow-cyan-400 p-2  text-cyan-300  hover:shadow-[inset_0_0_15px_#8732b5] transition-all duration-1000 transform hover:rotate-y-360 rounded-xl border border-cyan-500" />
-            </div>
-
-            <div className='group inline-block text-center'>
-              <p className="text-sm italic opacity-0 group-hover:opacity-100 transition-opacity duration-500 mb-2">
-                Tailwind CSS
-              </p>
-              <RiTailwindCssFill size={70} className="shadow-[inset_0_0_10px_#8732b5] shadow-sky-300 text-sky-500 p-2 hover:shadow-[0_0_15px_#8732b5] transition-all duration-1000 transform hover:rotate-y-360 rounded-xl border border-sky-500" />
-            </div>
-
-
-            <div className='group inline-block text-center'>
-              <p className="text-sm italic opacity-0 group-hover:opacity-100 transition-opacity duration-500 mb-2">
-                MongoDB
-              </p>
-              <SiMongodb size={70} className="shadow-[inset_0_0_10px_#8732b5]  shadow-lime-700 p-2  text-lime-600  hover:shadow-lg transition-all duration-1000 transform hover:rotate-y-360 rounded-xl border border-lime-600" />
-            </div>
-
-
-            <div className='group inline-block text-center'>
-              <p className="text-sm italic opacity-0 group-hover:opacity-100 transition-opacity duration-500 mb-2">
-                Bootstrap
-              </p>
-              <BsBootstrap size={70} className="shadow-[inset_0_0_10px_#8732b5]  shadow-purple-400 p-2  text-purple-500  hover:shadow-lg transition-all duration-1000 transform hover:rotate-y-360 rounded-xl border border-purple-500" />
-            </div>
-
-
-            <div className='group inline-block text-center'>
-              <p className="text-sm italic opacity-0 group-hover:opacity-100 transition-opacity duration-500 mb-2">
-                GitHub
-              </p>
-              <FiGithub size={70} className="shadow-[insest_0_0_10px_#8732b5]  shadow-gray-600 p-2  text-neutral-300  hover:shadow-lg transition-all duration-1000 transform hover:rotate-y-360 rounded-xl border border-neutral-300" />
-            </div>
-
-            <div className='group inline-block text-center'>
-              <p className="text-sm italic opacity-0 group-hover:opacity-100 transition-opacity duration-500 mb-2">
-                Express.js
-              </p>
-              <SiExpress size={70} className="shadow-[inset_0_0_10px_#8732b5] shadow-purple-700 p-2  text-purple-600  hover:shadow-lg transition duration-1000 transform hover:rotate-y-360 rounded-xl border border-purple-600" />
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  )
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, delay: i * 0.08, ease: 'easeOut' },
+  }),
 }
 
-export default Skills
+export default function Skills() {
+  return (
+    <section id="skills" className="py-24 px-6">
+      <div className="max-w-6xl mx-auto">
+        {/* Section header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
+        >
+          <p className="text-indigo-400 text-sm font-semibold uppercase tracking-widest mb-3">
+            What I work with
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-100 mb-4">
+            Tech Stack
+          </h2>
+          <p className="text-slate-400 max-w-lg mx-auto text-base">
+            A focused set of technologies I use daily to ship scalable, production-ready applications.
+          </p>
+        </motion.div>
+
+        {/* Categories */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {SKILL_CATEGORIES.map(({ label, color, border, skills }, catIdx) => (
+            <motion.div
+              key={label}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: catIdx * 0.1 }}
+              className={`bg-white/3 border ${border} rounded-2xl p-6 backdrop-blur-sm`}
+            >
+              <h3 className={`text-sm font-semibold uppercase tracking-wider ${color} mb-5`}>
+                {label}
+              </h3>
+              <div className="grid grid-cols-2 gap-3">
+                {skills.map(({ name, Icon, color: iconColor }, i) => (
+                  <motion.div
+                    key={name}
+                    variants={fadeUp}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    custom={catIdx * 4 + i}
+                    whileHover={{ scale: 1.04 }}
+                    className="flex items-center gap-3 bg-white/3 hover:bg-white/6 border border-white/5 hover:border-white/10 rounded-xl px-3 py-2.5 transition-all duration-200 cursor-default"
+                  >
+                    <Icon size={20} className={iconColor} />
+                    <span className="text-sm text-slate-300 font-medium">{name}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Bottom note */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="text-center text-slate-600 text-sm mt-8"
+        >
+          Also comfortable with: HTML5, CSS3, Bootstrap, VS Code, Excel, GitHub
+        </motion.p>
+      </div>
+    </section>
+  )
+}

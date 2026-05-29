@@ -6,35 +6,43 @@ import Footer from './components/Footer/Footer'
 import Skills from './components/Skills/Skills'
 import Projects from './components/Work/Projects'
 import Certificates from './components/Certificates/Certificates'
-
-
+import Experience from './components/Experience/Experience'
+import Contact from './components/Contact/Contact'
+import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 
 function App() {
-
-
   return (
-    
-    //bg-[url(https://cdn.wallpapersafari.com/52/54/xm6fAD.jpg)]
-<div className=' bg-[#050414]'>
-<div className="absolute inset-0 bg-[linear-gradient(to_right,#c4a7e7_1px,transparent_1px),linear-gradient(to_bottom,#a7c7e7_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20"></div>
+    <div className="relative bg-[#080812] min-h-screen">
+      {/* Ambient background glows */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[120px]" />
+        <div className="absolute top-1/3 right-0 w-[500px] h-[500px] bg-violet-600/8 rounded-full blur-[120px]" />
+        <div className="absolute bottom-1/4 left-0 w-[400px] h-[400px] bg-cyan-600/6 rounded-full blur-[120px]" />
+      </div>
 
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,0,110,0.7)_0%,transparent_45%)] blur-4xl"></div>
-      
+      {/* Subtle grid overlay */}
+      <div className="fixed inset-0 pointer-events-none opacity-[0.03]"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(99,102,241,1) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,1) 1px, transparent 1px)',
+          backgroundSize: '60px 60px'
+        }}
+      />
 
-            <div className='relative pt-10'>
+      <div className="relative z-10">
+        <Navbar />
+        <main>
+          <About />
+          <Skills />
+          <Projects />
+          <Experience />
+          <Certificates />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
 
-                <Navbar />
-                <About />
-                <Skills />
-                <Projects />
-                <Certificates /> 
-                <Footer />
-
-
-            </div>
-
-         </div>
-  
+      <ScrollToTop />
+    </div>
   )
 }
 

@@ -1,91 +1,96 @@
-
+import React from 'react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import { HiOutlineMailOpen } from "react-icons/hi";//<HiOutlineMailOpen />
+import { HiOutlineMail } from 'react-icons/hi'
 
-const Footer = () => {
+const NAV_LINKS = [
+  { label: 'About', id: 'about' },
+  { label: 'Skills', id: 'skills' },
+  { label: 'Projects', id: 'projects' },
+  { label: 'Experience', id: 'experience' },
+  { label: 'Certificates', id: 'certificates' },
+  { label: 'Contact', id: 'contact' },
+]
 
-  const menuItems = [
-    { id: "About", label: "About" },
-    { id: "Skills", label: "Skills" },
-    { id: "Projects", label: "Projects" },
-  ]
+const scrollTo = (id) =>
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
 
-  // const [activeSection, setActiveSection] = useState();
-
-  const ScrollToSection = (sectionId) => {
-    // setActiveSection(sectionId)
-    const section = document.getElementById(sectionId)
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" })
-    }
-
-  }
+export default function Footer() {
   return (
+    <footer className="border-t border-white/5 bg-[#080812]">
+      <div className="max-w-6xl mx-auto px-6 py-12">
+        <div className="grid sm:grid-cols-3 gap-10 mb-10">
+          {/* Brand */}
+          <div>
+            <p className="font-mono text-sm font-semibold text-indigo-400 mb-3">
+              <span className="text-slate-600">{'<'}</span>
+              AnshitaSoni
+              <span className="text-slate-600">{' />'}</span>
+            </p>
+            <p className="text-sm text-slate-500 leading-relaxed">
+              Full Stack Developer building scalable, user-focused web applications with the MERN stack.
+            </p>
+          </div>
 
-    <footer className='text-white flex flex-col justify-center items-center gap-5 py-8 mt-3 tracking-wide'>
+          {/* Quick nav */}
+          <div>
+            <h3 className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">Navigation</h3>
+            <ul className="space-y-2">
+              {NAV_LINKS.map(({ label, id }) => (
+                <li key={id}>
+                  <button
+                    onClick={() => scrollTo(id)}
+                    className="text-sm text-slate-500 hover:text-slate-200 transition-colors"
+                  >
+                    {label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-      <div>
-        <h2 className='font-bold text-2xl text-[#ff00ff]'>Let's Connect</h2>
+          {/* Contact */}
+          <div>
+            <h3 className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">Get In Touch</h3>
+            <div className="space-y-3">
+              <a
+                href="mailto:sonianshit@gmail.com"
+                className="flex items-center gap-2 text-sm text-slate-500 hover:text-slate-200 transition-colors"
+              >
+                <HiOutlineMail size={15} />
+                sonianshit@gmail.com
+              </a>
+              <a
+                href="https://github.com/Anshitasoni816"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-slate-500 hover:text-slate-200 transition-colors"
+              >
+                <FaGithub size={15} />
+                github.com/Anshitasoni816
+              </a>
+              <a
+                href="https://www.linkedin.com/in/anshitasoni/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-slate-500 hover:text-slate-200 transition-colors"
+              >
+                <FaLinkedin size={15} />
+                linkedin.com/in/anshitasoni
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom bar */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-white/5">
+          <p className="text-xs text-slate-600">
+            © 2026 Anshita Soni. All rights reserved.
+          </p>
+          <p className="text-xs text-slate-600">
+            Built with React · Tailwind CSS · Framer Motion
+          </p>
+        </div>
       </div>
-
-      <div className='flex gap-4'>
-
-        <div className='flex justify-center items-center gap-4 group'>
-
-          <p className='italic text-indigo-200 opacity-0 group-hover:opacity-100 transition-opcacity duration-800 text-sm'>connect on github</p>
-
-          <a href="https://github.com/Anshitasoni816"
-            target='_blank'
-            className='hover:text-[#8245ec] hover:scale-110 font-medium transition duration-300'><FaGithub size={24} />
-          </a>
-
-        </div>
-
-        <div className='flex justify-center items-center gap-4 group'>
-
-          <a href="https://www.linkedin.com/in/anshitasoni/"
-            target='_blank'
-            className='hover:text-[#8245ec] hover:scale-110 font-medium transition duration-300'> <FaLinkedin size={24} />
-          </a>
-          <p className='italic text-indigo-200 opacity-0 group-hover:opacity-100 transition-opacity duration-800 text-sm'>connect on linkedin</p>
-        </div>
-         </div>
-        <nav className='flex gap-5 justify-center items-center'>
-
-          {
-
-            menuItems.map((items, index) => (
-              <button
-                key={index}
-                className='hover:text-[#ff00ff] hover:scale-110 font-medium transition duration-300'
-                onClick={() => ScrollToSection(items.id)}>
-                {items.label}</button>
-            ))
-
-          }
-
-        </nav>
-
-
-        <div>
-          <p>© 2025 Anshita Soni. All rights reserved.</p>
-        </div>
-
-        <div className='flex justify-center items-center gap-2'>
-          <a href="mailto:sonianshit76@gmail.com">
-            <HiOutlineMailOpen
-              className='text-[#ff00ff]' />
-          </a>
-          <a href="mailto:sonianshit76@gmail.com">
-            sonianshit76@gmail.com
-          </a>
-        </div>
-        <p className='text-center text-lg italic bg-gradient-to-r from-[#ff00cc]  to-[#3333ff] bg-clip-text text-transparent tracking-wider'>" Always open to oppourtunities, collaborations and feedback."</p>
-
     </footer>
-
   )
-
 }
-
-export default Footer
