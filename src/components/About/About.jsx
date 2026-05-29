@@ -6,7 +6,7 @@ import profileImage from '../../assets/profileImage.png'
 
 const STATS = [
   { value: '<1', label: 'Year of\nExperience' },
-  { value: '3', label: 'Projects\nShowcased' },
+  { value: '2', label: 'Projects\nShowcased' },
   { value: 'MCA', label: '2024 -\n2026' },
   { value: '8.02', label: 'MCA\nCGPA' },
 ]
