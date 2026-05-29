@@ -27,10 +27,11 @@ const EXPERIENCES = [
     tag: '3 months',
     tagColor: 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20',
     points: [
-      'Developed responsive landing pages and reusable frontend components.',
-      'Assisted with UI updates, content changes, and page-level improvements.',
-      'Supported CRM operations across sales and cross-functional teams, resolving user queries efficiently.',
-      'Maintained data management pipelines using Excel for reporting and business insights.',
+      'Designed and developed responsive landing pages that supported digital advertising and lead-generation campaigns.',
+      'Implemented database integration for lead capture forms, enabling automated storage and management of customer information.',
+      'Created reusable frontend components to improve development efficiency and maintain UI consistency.',
+      'Worked closely with marketing and sales teams to support campaign execution and user acquisition initiatives.',
+      'Maintained operational reports and business data using Excel, contributing to performance tracking and decision-making.'
     ],
   },
   {
