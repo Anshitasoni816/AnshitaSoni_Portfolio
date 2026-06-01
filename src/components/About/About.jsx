@@ -8,7 +8,7 @@ const STATS = [
   { value: '<1', label: 'Year of\nExperience' },
   { value: '2', label: 'Projects\nShowcased' },
   { value: 'MCA', label: '2024 -\n2026' },
-  { value: '8.02', label: 'MCA\nCGPA' },
+  { value: '7.82', label: 'MCA\nCGPA' },
 ]
 
 const fadeUp = {
